@@ -48,6 +48,7 @@ class PenteGame:
     move_count: int = 0
 
     @staticmethod
+    # start legal moves fns
     def in_bounds(row: int, col: int) -> bool:
         """Return whether a board coordinate is within the 19×19 grid."""
         raise NotImplementedError
@@ -59,7 +60,9 @@ class PenteGame:
     def legal_moves(self) -> list[Move]:
         """Return all legal moves, without AI-specific candidate pruning."""
         raise NotImplementedError
+    # end legal moves fns
 
+    # start game state fns
     def make_move(self, row: int, col: int) -> MoveRecord:
         """Place a stone, resolve captures, update the turn, and check victory."""
         raise NotImplementedError
@@ -67,7 +70,9 @@ class PenteGame:
     def undo_move(self, record: MoveRecord) -> None:
         """Restore the entire position to the state before ``record``."""
         raise NotImplementedError
+    # end game state fns
 
+    # start capture and win checking fns
     def find_captures(self, row: int, col: int, player: Player) -> list[Coordinate]:
         """Find enemy stone coordinates captured by a move at this point."""
         raise NotImplementedError
@@ -95,7 +100,9 @@ class PenteGame:
     def is_draw(self) -> bool:
         """Return whether the board is full and neither player has won."""
         raise NotImplementedError
+    # end capture and win checking fns
 
+    # copy of game state for analysis or display
     def copy(self) -> PenteGame:
         """Return an independent copy of the position for analysis or display."""
         raise NotImplementedError

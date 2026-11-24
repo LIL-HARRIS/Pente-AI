@@ -2,8 +2,8 @@ from enum import Enum
 
 class Stone(Enum):
     EMPTY = 0
-    BLACK = 1
-    WHITE = 2
+    WHITE = 1
+    BLACK = 2
 
 class Heuristic(Enum):
     ONE_PAIR = 100
