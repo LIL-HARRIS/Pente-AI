@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from .game import Move, PenteGame, Player
-from .enum import Stone, Minimax
+from .enums import Stone, Minimax
 
 WIN_SCORE = 1_000_000
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from .enum import Stone
+from .enums import Stone
 
 BOARD_SIZE = 19
 Player = Stone

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from .game import PenteGame, Player
-from .enum import Stone, Heuristic
+from .enums import Stone, Heuristic
 
 DEFENSE_BIAS = 1.1
 

@@ -24,7 +24,7 @@ from .heuristics import (
     score_patterns,
     score_vulnerable_pairs,
 )
-from .enum import Stone, Minimax, Heuristic
+from .enums import Stone, Minimax, Heuristic
 
 __all__ = [
     "Stone",
